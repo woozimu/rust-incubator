@@ -1,9 +1,0 @@
-Rust does not have a built-in garbage collector (GC) as part of its language runtime. Instead, Rust adopts a "zero-cost abstractions" principle, aiming to provide memory safety and efficient resource management without relying on a GC.
-
-Memory management in Rust is primarily achieved through its ownership system and the concept of ownership, borrowing, and lifetimes. The ownership system ensures that each value has a unique owner, and ownership can be transferred or borrowed to other parts of the code. This approach allows Rust to statically enforce memory safety at compile time, eliminating the need for a GC.
-
-Rust encourages deterministic resource management through a mechanism called "RAII" (Resource Acquisition Is Initialization). RAII ensures that resources are automatically freed when they go out of scope, by tying resource deallocation to the lifespan of variables. This approach enables Rust to handle memory deallocation and resource cleanup without relying on a GC.
-
-However, it's worth noting that Rust allows you to use external libraries or frameworks that utilize a garbage collector if necessary. Rust has bindings to various libraries that provide GC functionality, such as the `gc` crate, which brings garbage collection to Rust if desired.
-
-In summary, Rust itself does not have a built-in garbage collector and relies on its ownership system and deterministic resource management to ensure memory safety and efficient resource usage. The absence of a GC is one of the factors contributing to Rust's focus on performance, control, and predictable resource management.
